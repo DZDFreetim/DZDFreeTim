@@ -4,6 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZDFreeTim.Web.Mvc", "DZDFreeTim.Web.Mvc\DZDFreeTim.Web.Mvc.csproj", "{803C87D1-03B0-45FC-8014-E87099ACA3F7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2A39C150-981F-4F8F-8378-6C2A7CBA0836} = {2A39C150-981F-4F8F-8378-6C2A7CBA0836}
+		{C894CA2C-8A30-4424-8323-D6A460FF107B} = {C894CA2C-8A30-4424-8323-D6A460FF107B}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZDFreeTim.Data", "DZDFreeTim.Data\DZDFreeTim.Data.csproj", "{2A39C150-981F-4F8F-8378-6C2A7CBA0836}"
 EndProject
