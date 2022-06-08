@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DZDFreeTim.Business\DZDFreeTim.Business.csproj" />
     <ProjectReference Include="..\DZDFreeTim.Data\DZDFreeTim.Data.csproj" />
   </ItemGroup>
 
