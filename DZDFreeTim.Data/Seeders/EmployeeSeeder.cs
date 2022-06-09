@@ -19,8 +19,6 @@ namespace DZDFreeTim.Data.Seeders
                 new Employee() { Email = "", Password = "", Name = "" },
                 new Employee() { Email = "", Password = "", Name = "" },
 
-
-
             };
             modelBuilder.Entity<Employee>().HasData(employees);
                        
