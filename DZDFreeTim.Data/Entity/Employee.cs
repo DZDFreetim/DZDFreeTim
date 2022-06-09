@@ -23,10 +23,11 @@ namespace DZDFreeTim.Data.Entity
         [Column(TypeName = "nvharchar(50)")]
         public string Password { get; set; }
 
-        [Required]
+        [Required]        
         public DateTime EmployementDate { get; set; }
 
         [Required]
+        [DataType(DataType.Date)]
         public string EmployeeType { get; set; }
 
         public int TeamId { get; set; }
