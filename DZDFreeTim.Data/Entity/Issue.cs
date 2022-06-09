@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DZDFreeTim.Data.Entity
+{
+    class Issue : BaseEntity
+    {
+
+        [Key]
+        public int IssueId { get; set; }
+
+        [Required]
+        [Column(TypeName = "nvharchar(50)")]
+        public string IssueName { get; set; }
+
+        [ForeignKey("IssueType")]
+        public int IssueType { get; set; }
+
+        [ForeignKey("Bank")]
+        public int CompanyId { get; set; }
+
+        [Required]
+        [Column(TypeName = "nvharchar(50)")]
+
+        public string Summary { get; set; }
+
+
+        public int AssigneeId { get; set; }
+
+        [ForeignKey("Reporter")]
+        public int ReporterId { get; set; }
+
+        [ForeignKey("Resolution")]
+        public int Resolution { get; set; }
+
+        [ForeignKey("Priority")]
+        public int Priority { get; set; }
+
+        [Required]
+        [DataType(DataType.Date)]
+        public string Created { get; set; }
+
+        [Required]
+        [DataType(DataType.Date)]
+        public string Resolved{ get; set; }
+
+
+        [ForeignKey("IssueStatus")]
+        public int Status { get; set; }
+    }
+}

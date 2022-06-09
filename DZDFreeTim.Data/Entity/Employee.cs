@@ -17,8 +17,8 @@ namespace DZDFreeTim.Data.Entity
 
        
         [Required]
+        [Column(TypeName = "nvharchar(150)")]
         [DataType(DataType.EmailAddress)]
-        [EmailAddress]
         public string Email { get; set; }
 
         [Required]

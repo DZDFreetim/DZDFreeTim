@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace DZDFreeTim.Data.Entity
 {
-    public class Department
+    class Reporter : BaseEntity
     {
         [Key]
-        public int DepartmentId { get; set; }
+        public int ReporterId { get; set; }
 
         [Required]
         [Column(TypeName = "nvharchar(50)")]
-        public string DepartmentName { get; set; }
+        public string Definition { get; set; }
     }
 }
