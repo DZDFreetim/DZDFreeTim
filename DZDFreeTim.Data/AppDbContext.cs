@@ -1,4 +1,5 @@
 ﻿using DZDFreeTim.Data.Entity;
+using DZDFreeTim.Data.Seeders;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,14 +11,14 @@ namespace DZDFreeTim.Data
 {
     public class AppDbContext : DbContext
     {
-        // Tum claslar buraya eklenecek 
+        
+        // Tum claslar buraya eklenecek Model sınıfını temsil ediyor
         public DbSet<Employee> Employees { get; set; }
 
         public DbSet<Department> Departments { get; set; }
 
-       
 
-        //DB adını DZDFreeTim verdim, solution adı ile aynı olsun 
+        // DB Bağlantı Metni
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
             string connectionString = "Data Source=(LocalDb)\\MSSQLLocalDB; Initial Catalog=DZDFreeTimDb; Integrated Security=SSPI;";
@@ -25,10 +26,12 @@ namespace DZDFreeTim.Data
             builder.UseSqlServer(connectionString);
         }
 
+
+        // 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
-
+            //model seeder , 14 class için tek tek yazılacaak
+            EmployeeSeeder.SeedData(modelBuilder);
         }
     }
 }
