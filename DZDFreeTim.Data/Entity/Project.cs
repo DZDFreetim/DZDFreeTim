@@ -29,7 +29,7 @@ namespace DZDFreeTim.Data.Entity
         public string JiraTaskNo { get; set; }
 
         [Required]
-        public int priority { get; set; }
+        public int Priority { get; set; }
 
         [ForeignKey("DzdStatus")]
         public int DzdStatus { get; set; }

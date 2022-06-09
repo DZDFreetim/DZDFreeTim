@@ -8,5 +8,11 @@ namespace DZDFreeTim.Data.Entity
 {
     class Team
     {
+        [Key]
+        public int TeamId { get; set; }
+
+        [Required]
+        [Column(TypeName = "nvharchar(50)")]
+        public string TeamName { get; set; }
     }
 }
