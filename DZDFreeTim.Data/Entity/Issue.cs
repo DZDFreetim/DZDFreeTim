@@ -15,6 +15,7 @@ namespace DZDFreeTim.Data.Entity
         [Key]
         public int IssueId { get; set; }
 
+
         [Required]
         [Column(TypeName = "nvharchar(50)")]
         public string IssueName { get; set; }
