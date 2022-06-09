@@ -14,7 +14,18 @@ namespace DZDFreeTim.Data.Seeders
         {
             var departments = new List<Department>()
             {
-                //new Department() { , , Name = "" },
+                new Department() { 
+                    DepartmentId=1,
+                    DepartmentName="analists"
+                },
+                new Department() {
+                    DepartmentId=2,
+                    DepartmentName="software"
+                },
+                new Department() {
+                    DepartmentId=3,
+                    DepartmentName="jira"
+                },
 
 
             };
