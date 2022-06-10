@@ -44,7 +44,7 @@ namespace DZDFreeTim.Data.Entity
         public int DeveloperId { get; set; }
 
         [ForeignKey("IntertechTeam")]
-        public int AnalystId { get; set; }
+        public int IntertechTeam { get; set; }
 
         [Required]
         public int Effort { get; set; }
