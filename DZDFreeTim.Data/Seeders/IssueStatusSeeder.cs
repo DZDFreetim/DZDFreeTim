@@ -14,16 +14,14 @@ namespace DZDFreeTim.Data.Seeders
         {
             var issueStatuses = new List<IssueStatus>()
             {
-                new IssueStatus() { StatusId ="1560510", Definition="ab"},
-                new IssueStatus() { StatusId ="1616430", Definition="bc"},
-                new IssueStatus() { StatusId ="2043290", Definition="cd"},
-                new IssueStatus() { StatusId ="2051773", Definition="de"},
-                new IssueStatus() { StatusId ="2052992", Definition="ef"},
+                new IssueStatus() { IssueStatusId =1560510, Definition="ab"},
+                new IssueStatus() { IssueStatusId =1616430, Definition="bc"},
+                new IssueStatus() { IssueStatusId =2043290, Definition="cd"},
+                new IssueStatus() { IssueStatusId =2051773, Definition="de"},
+                new IssueStatus() { IssueStatusId =2052992, Definition="ef"},
 
             };
-            modelBuilder.Entity<IssueStatus>().HasData(IssueStatus);
-
-
+            modelBuilder.Entity<IssueStatus>().HasData(issueStatuses);
 
         }
 

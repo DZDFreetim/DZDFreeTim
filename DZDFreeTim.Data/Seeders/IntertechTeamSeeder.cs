@@ -30,9 +30,7 @@ namespace DZDFreeTim.Data.Seeders
 
 
             };
-            modelBuilder.Entity<IntertechTeam>().HasData(IntertechTeams);
-
-
+            modelBuilder.Entity<IntertechTeam>().HasData(intertechTeams);
 
         }
     }
