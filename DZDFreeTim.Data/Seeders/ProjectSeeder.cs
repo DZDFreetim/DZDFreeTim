@@ -32,7 +32,7 @@ namespace DZDFreeTim.Data.Seeders
                     BillYearQuarter = "2022-Q1"
                     },
                 new Project() {
-                    ProjectId = 1,
+                    ProjectId = 2,
                     BankId = 1,
                     ProjectName= "Project 2" ,
                     JiraProjectNo = "2",
@@ -49,7 +49,7 @@ namespace DZDFreeTim.Data.Seeders
                     BillYearQuarter = "2022-Q2"
                     },
                 new Project() {
-                    ProjectId = 1,
+                    ProjectId = 3,
                     BankId =2,
                     ProjectName= "Project 3" ,
                     JiraProjectNo = "104",
@@ -66,7 +66,7 @@ namespace DZDFreeTim.Data.Seeders
                     BillYearQuarter = "2021-Q2"
                     },
                 new Project() {
-                    ProjectId = 1,
+                    ProjectId = 4,
                     BankId = 4,
                     ProjectName= "Project 4" ,
                     JiraProjectNo = "4",
