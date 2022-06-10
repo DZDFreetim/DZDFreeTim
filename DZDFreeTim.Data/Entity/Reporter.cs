@@ -9,7 +9,7 @@ using DZDFreeTim.Data.Entity.Abstract;
 
 namespace DZDFreeTim.Data.Entity
 {
-    class Reporter : BaseEntity
+    public class Reporter : BaseEntity
     {
         [Key]
         public int ReporterId { get; set; }

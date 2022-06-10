@@ -9,7 +9,7 @@ using DZDFreeTim.Data.Entity.Abstract;
 
 namespace DZDFreeTim.Data.Entity
 {
-    class Resolution : BaseEntity
+    public class Resolution : BaseEntity
     {
         [Key]
         public int ResolutionId { get; set; }

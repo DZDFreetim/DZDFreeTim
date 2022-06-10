@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace DZDFreeTim.Data.Entity
 {
-    class IssueStatus : IAuditEntity
+    public class IssueStatus : IAuditEntity
     {
         [Key]
-        public int StatusId { get; set; }
+        public int IssueStatusId { get; set; }
 
         [Required]
         [Column(TypeName = "nvharchar(50)")]

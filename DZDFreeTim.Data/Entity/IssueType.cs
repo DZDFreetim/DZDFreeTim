@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DZDFreeTim.Data.Entity
 {
-    class IssueType : BaseEntity
+    public class IssueType : BaseEntity
     {
         [Key]
         public int IssueId { get; set; }
