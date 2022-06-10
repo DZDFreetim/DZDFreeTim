@@ -12,7 +12,7 @@ namespace DZDFreeTim.Data.Seeders
     {
         public static void SeedData(ModelBuilder modelBuilder)
         {
-            var IntertechTeams = new List<IntertechTeam>()
+            var intertechTeams = new List<IntertechTeam>()
             {
                 new IntertechTeam() { 
                     IntertechTeamId=1,

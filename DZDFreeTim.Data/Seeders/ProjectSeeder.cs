@@ -14,7 +14,7 @@ namespace DZDFreeTim.Data.Seeders
         {
             var projects = new List<Project>()
             {
-                new Project() { 
+                new Project() {
                     ProjectId = 1, 
                     BankId = 1, 
                     ProjectName= "Project 1" , 

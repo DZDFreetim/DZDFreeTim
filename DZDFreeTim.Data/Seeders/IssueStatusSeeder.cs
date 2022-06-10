@@ -12,7 +12,7 @@ namespace DZDFreeTim.Data.Seeders
     {
         public static void SeedData(ModelBuilder modelBuilder)
         {
-            var IssueStatus = new List<IssueStatus>()
+            var issueStatuses = new List<IssueStatus>()
             {
                 new IssueStatus() { StatusId ="1560510", Definition="ab"},
                 new IssueStatus() { StatusId ="1616430", Definition="bc"},
