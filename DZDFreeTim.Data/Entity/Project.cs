@@ -17,15 +17,15 @@ namespace DZDFreeTim.Data.Entity
         public int BankId { get; set; }
 
         [Required]
-        [Column(TypeName = "nvharchar(50)")]
+        [StringLength(50)]
         public string ProjectName { get; set; }
 
         [Required]
-        [Column(TypeName = "nvharchar(50)")]
+        [StringLength(50)]
         public string JiraProjectNo { get; set; }
 
         [Required]
-        [Column(TypeName = "nvharchar(50)")]
+        [StringLength(50)]
         public string JiraTaskNo { get; set; }
 
         [Required]
@@ -49,13 +49,13 @@ namespace DZDFreeTim.Data.Entity
         [Required]
         public int Effort { get; set; }
 
-        [Column(TypeName = "nvharchar(50)")]
+        [StringLength(50)]
         public string Notes { get; set; }
 
         public int InvNumber { get; set; }
 
         
-        [Column(TypeName = "nvharchar(8)")]
+        [StringLength(8)]
         public string BillYearQuarter{ get; set; }
     }
 }

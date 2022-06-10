@@ -14,7 +14,7 @@ namespace DZDFreeTim.Data.Entity
         [Key]
         public int DzdStatusId { get; set; }
 
-        [Column(TypeName = "nvharchar(150)")]
+        [StringLength(150)]
         public string Definition { get; set; }
     }
 }

@@ -14,8 +14,7 @@ namespace DZDFreeTim.Data.Entity
         [Key]
         public int DepartmentId { get; set; }
 
-        [Required]
-        [Column(TypeName = "nvharchar(50)")]
+        [Required, StringLength(50)]
         public string DepartmentName { get; set; }
     }
 }

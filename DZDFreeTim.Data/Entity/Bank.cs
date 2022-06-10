@@ -15,7 +15,7 @@ namespace DZDFreeTim.Data.Entity
         public int BankId { get; set; }
 
         [Required]
-        [Column(TypeName = "nvharchar(50)")]
+        [StringLength(50)]
         public string BankName { get; set; }
     }
 }

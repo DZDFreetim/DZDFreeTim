@@ -17,7 +17,7 @@ namespace DZDFreeTim.Data.Entity
 
 
         [Required]
-        [Column(TypeName = "nvharchar(50)")]
+        [StringLength(50)]
         public string IssueName { get; set; }
 
         [ForeignKey("IssueType")]
@@ -27,7 +27,7 @@ namespace DZDFreeTim.Data.Entity
         public int CompanyId { get; set; }
 
         [Required]
-        [Column(TypeName = "nvharchar(50)")]
+        [StringLength(50)]
 
         public string Summary { get; set; }
 

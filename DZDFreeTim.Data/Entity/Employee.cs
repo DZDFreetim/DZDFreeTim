@@ -15,17 +15,17 @@ namespace DZDFreeTim.Data.Entity
         public int EmployeeID { get; set; }
 
         [Required]
-        [Column(TypeName = "nvharchar(50)")]
+        [StringLength(50)]
         public string Name { get; set; }
 
        
         [Required]
-        [Column(TypeName = "nvharchar(150)")]
+        [StringLength(150)]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Required]
-        [Column(TypeName = "nvharchar(50)")]
+        [StringLength(50)]
         public string Password { get; set; }
 
         [Required]        

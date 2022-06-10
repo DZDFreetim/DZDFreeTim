@@ -13,7 +13,7 @@ namespace DZDFreeTim.Data.Entity
         [Key]
         public int JiraStatusId { get; set; }
 
-        [Column(TypeName = "nvharchar(150)")]
+        [StringLength(50)]
         public string Definition { get; set; }
     }
 }
