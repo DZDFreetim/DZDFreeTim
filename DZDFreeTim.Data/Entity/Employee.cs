@@ -11,6 +11,9 @@ namespace DZDFreeTim.Data.Entity
 {
     public class Employee : BaseEntity
     {
+        [Key]
+        public int EmployeeID { get; set; }
+
         [Required]
         [Column(TypeName = "nvharchar(50)")]
         public string Name { get; set; }

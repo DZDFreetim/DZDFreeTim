@@ -13,7 +13,7 @@ namespace DZDFreeTim.Data.Entity
         [Key]
         public int ProjectId { get; set; }
 
-        [ForeignKey("Bank")]//BankId?
+        [ForeignKey("Bank")]
         public int BankId { get; set; }
 
         [Required]
