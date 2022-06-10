@@ -44,6 +44,18 @@ namespace DZDFreeTim.Data
         {
             //model seeder , 14 class için tek tek yazılacaak
             EmployeeSeeder.SeedData(modelBuilder);
+            BankSeeder.SeedData(modelBuilder);
+            DepartmentSeeder.SeedData(modelBuilder);
+            DzdStatusSeeder.SeedData(modelBuilder);
+            IntertechTeamSeeder.SeedData(modelBuilder);
+            IssueSeeder.SeedData(modelBuilder);
+            IssueStatusSeeder.SeedData(modelBuilder);
+            IssueTypeSeeder.SeedData(modelBuilder);
+            PrioritySeeder.SeedData(modelBuilder);
+            ProjectSeeder.SeedData(modelBuilder);
+            ReporterSeeder.SeedData(modelBuilder);
+            ResolutionSeeder.SeedData(modelBuilder);
+            TeamSeeder.SeedData(modelBuilder);
         }
     }
 }
