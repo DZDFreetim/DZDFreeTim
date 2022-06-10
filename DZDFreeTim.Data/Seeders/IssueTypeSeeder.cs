@@ -16,15 +16,15 @@ namespace DZDFreeTim.Data.Seeders
             {
                 new IssueType() {
                     IssueId=1,
-                    Definition=""
+                    Definition="1"
                 },
                  new IssueType() {
                     IssueId=2,
-                    Definition=""
+                    Definition="2"
                 },
                   new IssueType() {
                     IssueId=3,
-                    Definition=""
+                    Definition="3"
                 },
 
 
