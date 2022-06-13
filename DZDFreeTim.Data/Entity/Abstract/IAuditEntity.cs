@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace DZDFreeTim.Data.Entity.Abstract
 {
-    public class UpdateAuditableEntity : BaseEntity
+    public class IAuditEntity : BaseEntity
     {
-        public int UpdatedBy { get; set; }
-
+        public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
+        public DateTime DeletedAt { get; set; }
+
+
+
     }
 }

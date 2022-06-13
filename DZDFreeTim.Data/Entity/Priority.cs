@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 
 namespace DZDFreeTim.Data.Entity
 {
-    public class Department: IAuditEntity
+    public class Priority : BaseEntity
     {
         [Key]
-        public int DepartmentId { get; set; }
-
-        [Required, StringLength(50)]
-        public string DepartmentName { get; set; }
+        public int PriorityId { get; set; }
+  
+        [Required]
+        [StringLength(50)]
+        public string Definition { get; set; }
     }
 }
