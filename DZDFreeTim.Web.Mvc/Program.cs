@@ -22,7 +22,7 @@ using (var scope = app.Services.CreateScope())
     db.Database.EnsureDeleted();
 
     // Veritabanını oluşturur
-    db.Database.EnsureCreated();
+   db.Database.EnsureCreated();
 }
 
 

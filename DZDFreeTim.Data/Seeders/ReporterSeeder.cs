@@ -16,15 +16,15 @@ namespace DZDFreeTim.Data.Seeders
             {
                 new Reporter() {
                     ReporterId=1,
-                    Definition=""
+                    Definition="12"
                 },
                 new Reporter() {
                     ReporterId=2,
-                    Definition=""
+                    Definition="32"
                 },
                 new Reporter() {
                     ReporterId=3,
-                    Definition=""
+                    Definition="48"
                 },
 
 
