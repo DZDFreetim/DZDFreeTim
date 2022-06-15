@@ -37,5 +37,8 @@ namespace DZDFreeTim.Data.Entity
 
         public int TeamId { get; set; }
 
+        // Personel çalışıyor mu - Authantication için                
+        public bool IsActive { get; set; }
+
     }
 }
