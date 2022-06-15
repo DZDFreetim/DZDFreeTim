@@ -60,6 +60,30 @@ namespace DZDFreeTim.Data.Seeders
                     IsActive=true,
 
 
+                },
+                new Employee() {
+                    EmployeeID = 5,
+                    Name = "Umut Yıldırım",
+                    Email = "umut.yildirim@dzdtech.com",
+                    Password = "dk8gfdv56sd31",
+                    EmployementDate = new DateTime(2019, 10, 20),
+                    EmployeeType = "project_admin",
+                    TeamId = 3,
+                    IsActive=true,
+
+
+                },
+                new Employee() {
+                    EmployeeID = 6,
+                    Name = "Emirhan Bülbül",
+                    Email = "emirhan.bülbül@dzdtech.com",
+                    Password = "dgdfgsdvsdfs45",
+                    EmployementDate = new DateTime(2018, 10, 20),
+                    EmployeeType = "itsm_admin",
+                    TeamId = 3,
+                    IsActive=true,
+
+
                 }
 
             };

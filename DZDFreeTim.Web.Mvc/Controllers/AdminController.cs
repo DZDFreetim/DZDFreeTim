@@ -6,13 +6,13 @@ namespace DZDFreeTim.Web.Mvc.Controllers
 {
     public class AdminController : Controller
     {
-        [Authorize(Roles = "editor,project")]
+        [Authorize(Roles = "editor,project_admin")]
         public IActionResult AddProject()
         {
             return View();
         }
 
-        [Authorize(Roles = "editor,ITSM")]
+        [Authorize(Roles = "editor,itsm_admin")]
         public IActionResult AddITSM()
         {
             return View();

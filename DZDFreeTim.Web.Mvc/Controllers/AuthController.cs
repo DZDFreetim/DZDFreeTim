@@ -23,6 +23,7 @@ namespace DZDFreeTim.Web.Mvc.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model, string? returnUrl)
         {
+            
             if (ModelState.IsValid)
             {
                 var user = Db.Employees.FirstOrDefault(e =>
@@ -41,7 +42,7 @@ namespace DZDFreeTim.Web.Mvc.Controllers
                         new Claim(ClaimTypes.Name, user.EmployeeID.ToString()),
                         new Claim(ClaimTypes.Role, user.EmployeeType)
                     };
-
+                    
                     if (!string.IsNullOrEmpty(user.EmployeeType))
                     {
                         string[] roles = user.EmployeeType.Split(";");
@@ -65,7 +66,15 @@ namespace DZDFreeTim.Web.Mvc.Controllers
 
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrinciple, properties);
 
-                    return Redirect(returnUrl != null ? returnUrl : "/");
+                    if (user.EmployeeType == "analyst")
+                        return RedirectToAction("Analist", "User");
+                    else if (user.EmployeeType == "developer")
+                        return RedirectToAction("Developer", "User");
+                    else if (user.EmployeeType == "project_admin")
+                        return RedirectToAction("AddProject","Admin");
+                    else if (user.EmployeeType == "itsm_admin")
+                        return RedirectToAction("AddITSM", "Admin");
+                    //return Redirect(returnUrl != null ? returnUrl : "/");
                 }
             }
 
