@@ -1,0 +1,433 @@
+﻿
+
+ <div class="app-content pt-3 p-md-3 p-lg-4">
+		    <div class="container-xl">
+			    <div class="row g-3 mb-4 align-items-center justify-content-between">
+				    <div class="col-auto">
+			            <h1 class="app-page-title mb-0">Projeler</h1>
+				    </div>
+				    <div class="col-auto">
+					     <div class="page-utilities">
+						    <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
+							    <div class="col-auto">
+								    <form class="table-search-form row gx-1 align-items-center">
+					                    <div class="col-auto">
+					                        <input type="text" id="search-orders" name="searchorders" class="form-control search-orders" placeholder="Jira Proje No ">
+					                    </div>
+					                    <div class="col-auto">
+					                        <button type="submit" class="btn app-btn-secondary">Ara</button>
+					                    </div>
+					                </form>
+					                
+							    </div><!--//col-->
+							    <div class="col-auto">
+								    
+								    <select class="form-select w-auto" >
+										  <option selected value="option-1">Son 6 Ay</option>
+										  <option value="option-2">4. Çeyrek</option>
+										  <option value="option-3">3. Çeyrek</option>
+										  <option value="option-4">2. Çeyrek</option>
+										  <option value="option-5">1. Çeyrek</option>
+										  
+									</select>
+							    </div>
+								<div class="col-auto">						    
+								    <a class="btn app-btn-secondary" href="#">
+									    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-excel" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" d="M5.884 6.68a.5.5 0 1 0-.768.64L7.349 10l-2.233 2.68a.5.5 0 0 0 .768.64L8 10.781l2.116 2.54a.5.5 0 0 0 .768-.641L8.651 10l2.233-2.68a.5.5 0 0 0-.768-.64L8 9.219l-2.116-2.54z"/>
+											<path fill-rule="evenodd" d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+										</svg>
+									    Proje Ekle
+									</a>
+							    </div>
+
+							    <div class="col-auto">						    
+								    <a class="btn app-btn-secondary" href="#">
+									    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-excel" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" d="M5.884 6.68a.5.5 0 1 0-.768.64L7.349 10l-2.233 2.68a.5.5 0 0 0 .768.64L8 10.781l2.116 2.54a.5.5 0 0 0 .768-.641L8.651 10l2.233-2.68a.5.5 0 0 0-.768-.64L8 9.219l-2.116-2.54z"/>
+											<path fill-rule="evenodd" d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+										</svg>
+									    Excel Yükle
+									</a>
+							    </div>
+						    </div><!--//row-->
+					    </div><!--//table-utilities-->
+				    </div><!--//col-auto-->
+			    </div><!--//row-->
+			   
+			    
+			    <nav id="orders-table-tab" class="orders-table-tab app-nav-tabs nav shadow-sm flex-column flex-sm-row mb-4">
+				    <a class="flex-sm-fill text-sm-center nav-link active" id="orders-all-tab" data-bs-toggle="tab" href="#orders-all" role="tab" aria-controls="orders-all" aria-selected="true">Hepsi</a>
+				    <a class="flex-sm-fill text-sm-center nav-link"  id="orders-paid-tab" data-bs-toggle="tab" href="#orders-paid" role="tab" aria-controls="orders-paid" aria-selected="false">Tamamlanan</a>
+				    <a class="flex-sm-fill text-sm-center nav-link" id="orders-pending-tab" data-bs-toggle="tab" href="#orders-pending" role="tab" aria-controls="orders-pending" aria-selected="false">Devam Eden</a>
+				</nav>
+				
+				
+				<div class="tab-content" id="orders-table-tab-content">
+			        <div class="tab-pane fade show active" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
+					    <div class="app-card app-card-orders-table shadow-sm mb-5">
+						    <div class="app-card-body">
+							    <div class="table-responsive">
+							        <table class="table app-table-hover mb-0 text-left" style="width:100%">
+										<thead>
+											<tr>
+												<th class="cell">Banka</th>
+												<th class="cell" >Jira Proje No</th>
+												<th class="cell">Jira Task No</th>
+												<th class="cell">Proje Adı</th>
+												<th class="cell">Öncelik</th>
+												<th class="cell">DZD Statü</th>
+												<th class="cell">Jira Statü</th>
+												<th class="cell">Bölüm</th>
+												<th class="cell">DZD Takım</th>
+												<th class="cell">İlgili Analist</th>
+												<th class="cell">İlgili Yazılımcı</th>
+												<th class="cell">Efor(A/G)</th>
+												<th class="cell">Intertech Takım</th>
+												<th class="cell">NOT</th>
+												<th class="cell">Inv. Number</th>
+												<th class="cell">Faturalandırma Yılı ve Dönemi</th>
+
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="cell">Deniz</td>
+												<td class="cell"><span class="truncate">DENIZ-38926</span></td>
+												<td class="cell">ISCM-5762</td>
+												<td class="cell"><span>Ticari Elektronik İleti Formu/Dijital Onay</span><span class="note">2:16 PM</span></td>
+												<td class="cell"><span class="badge bg-success">3</span></td>
+												<td class="cell">00 - Salesforce İhale Bekleniyor</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#">01 - Ön Analiz</a></td>*@
+												<td class="cell">01 - Ön Analiz</td>
+												<td class="cell">CRM Technologies</td>
+												<td class="cell">Kampanya</td>
+												<td class="cell">Sena Kaytaz</td>
+												<td class="cell">Yasin Ekinci</td>
+												<td class="cell">16</td>
+												<td class="cell">İletişim Yönetimi</td>
+												<td class="cell">Taşınma Yılı ve Dönemi : 2022</td>
+												<td class="cell"> </td>
+												<td class="cell">2022-Q1</td>
+												
+
+											</tr>
+											<tr>
+												<td class="cell">Deniz</td>
+												<td class="cell"><span class="truncate">DENIZ-38926</span></td>
+												<td class="cell">ISCM-5762</td>
+												<td class="cell"><span>Ticari Elektronik İleti Formu/Dijital Onay</span><span class="note">2:16 PM</span></td>
+												<td class="cell"><span class="badge bg-success">3</span></td>
+												<td class="cell">00 - Salesforce İhale Bekleniyor</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#">01 - Ön Analiz</a></td>*@
+												<td class="cell">01 - Ön Analiz</td>
+												<td class="cell">CRM Technologies</td>
+												<td class="cell">Kampanya</td>
+												<td class="cell">Sena Kaytaz</td>
+												<td class="cell">Yasin Ekinci</td>
+												<td class="cell">16</td>
+												<td class="cell">İletişim Yönetimi</td>
+												<td class="cell">Taşınma Yılı ve Dönemi : 2022</td>
+												<td class="cell"> </td>
+												<td class="cell">2022-Q1</td>
+											</tr>
+											<tr>
+												<td class="cell">Deniz</td>
+												<td class="cell"><span class="truncate">DENIZ-38926</span></td>
+												<td class="cell">ISCM-5762</td>
+												<td class="cell"><span>Ticari Elektronik İleti Formu/Dijital Onay</span><span class="note">2:16 PM</span></td>
+												<td class="cell"><span class="badge bg-success">3</span></td>
+												<td class="cell">00 - Salesforce İhale Bekleniyor</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#">01 - Ön Analiz</a></td>*@
+												<td class="cell">01 - Ön Analiz</td>
+												<td class="cell">CRM Technologies</td>
+												<td class="cell">Kampanya</td>
+												<td class="cell">Sena Kaytaz</td>
+												<td class="cell">Yasin Ekinci</td>
+												<td class="cell">16</td>
+												<td class="cell">İletişim Yönetimi</td>
+												<td class="cell">Taşınma Yılı ve Dönemi : 2022</td>
+												<td class="cell"> </td>
+												<td class="cell">2022-Q1</td>
+											</tr>
+											
+											<tr>
+												<td class="cell">Deniz</td>
+												<td class="cell"><span class="truncate">DENIZ-38926</span></td>
+												<td class="cell">ISCM-5762</td>
+												<td class="cell"><span>Ticari Elektronik İleti Formu/Dijital Onay</span><span class="note">2:16 PM</span></td>
+												<td class="cell"><span class="badge bg-success">3</span></td>
+												<td class="cell">00 - Salesforce İhale Bekleniyor</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#">01 - Ön Analiz</a></td>*@
+												<td class="cell">01 - Ön Analiz</td>
+												<td class="cell">CRM Technologies</td>
+												<td class="cell">Kampanya</td>
+												<td class="cell">Sena Kaytaz</td>
+												<td class="cell">Yasin Ekinci</td>
+												<td class="cell">16</td>
+												<td class="cell">İletişim Yönetimi</td>
+												<td class="cell">Taşınma Yılı ve Dönemi : 2022</td>
+												<td class="cell"> </td>
+												<td class="cell">2022-Q1</td>
+											</tr>
+											
+											<tr>
+												<td class="cell">Deniz</td>
+												<td class="cell"><span class="truncate">DENIZ-38926</span></td>
+												<td class="cell">ISCM-5762</td>
+												<td class="cell"><span>Ticari Elektronik İleti Formu/Dijital Onay</span><span class="note">2:16 PM</span></td>
+												<td class="cell"><span class="badge bg-success">3</span></td>
+												<td class="cell">00 - Salesforce İhale Bekleniyor</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#">01 - Ön Analiz</a></td>*@
+												<td class="cell">01 - Ön Analiz</td>
+												<td class="cell">CRM Technologies</td>
+												<td class="cell">Kampanya</td>
+												<td class="cell">Sena Kaytaz</td>
+												<td class="cell">Yasin Ekinci</td>
+												<td class="cell">16</td>
+												<td class="cell">İletişim Yönetimi</td>
+												<td class="cell">Taşınma Yılı ve Dönemi : 2022</td>
+												<td class="cell"> </td>
+												<td class="cell">2022-Q1</td>
+											</tr>
+											
+											<tr>
+												<td class="cell">Deniz</td>
+												<td class="cell"><span class="truncate">DENIZ-38926</span></td>
+												<td class="cell">ISCM-5762</td>
+												<td class="cell"><span>Ticari Elektronik İleti Formu/Dijital Onay</span><span class="note">2:16 PM</span></td>
+												<td class="cell"><span class="badge bg-success">3</span></td>
+												<td class="cell">00 - Salesforce İhale Bekleniyor</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#">01 - Ön Analiz</a></td>*@
+												<td class="cell">01 - Ön Analiz</td>
+												<td class="cell">CRM Technologies</td>
+												<td class="cell">Kampanya</td>
+												<td class="cell">Sena Kaytaz</td>
+												<td class="cell">Yasin Ekinci</td>
+												<td class="cell">16</td>
+												<td class="cell">İletişim Yönetimi</td>
+												<td class="cell">Taşınma Yılı ve Dönemi : 2022</td>
+												<td class="cell"> </td>
+												<td class="cell">2022-Q1</td>
+											</tr>
+		
+										</tbody>
+									</table>
+						        </div><!--//table-responsive-->
+						       
+						    </div><!--//app-card-body-->		
+						</div><!--//app-card-->
+						<nav class="app-pagination">
+							<ul class="pagination justify-content-center">
+								<li class="page-item disabled">
+									<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Önceki</a>
+							    </li>
+								<li class="page-item active"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item">
+								    <a class="page-link" href="#">Sonraki</a>
+								</li>
+							</ul>
+						</nav><!--//app-pagination-->
+						
+			        </div><!--//tab-pane-->
+			        
+			        <div class="tab-pane fade" id="orders-paid" role="tabpanel" aria-labelledby="orders-paid-tab">
+					    <div class="app-card app-card-orders-table mb-5">
+						    <div class="app-card-body">
+							    <div class="table-responsive">
+								    
+							        <table class="table mb-0 text-left">
+										<thead>
+											<tr>
+												<th class="cell" style="width:10%">Banka</th>
+												<th class="cell">Jira Proje No</th>
+												<th class="cell">Jira Task No</th>
+												<th class="cell">Proje Adı</th>
+												<th class="cell">Öncelik</th>
+												<th class="cell">DZD Statü</th>
+												<th class="cell">Jira Statü</th>
+												<th class="cell">Bölüm</th>
+												<th class="cell">DZD Takım</th>
+												<th class="cell">İlgili Analist</th>
+												<th class="cell">İlgili Yazılımcı</th>
+												<th class="cell">Efor(A/G)</th>
+												<th class="cell">Intertech Takım</th>
+												<th class="cell">NOT</th>
+												<th class="cell">Inv. Number</th>
+												<th class="cell">Faturalandırma Yılı ve Dönemi</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="cell">#15346</td>
+												<td class="cell"><span class="truncate">Lorem ipsum dolor </span></td>
+												<td class="cell">John Sanders</td>
+												<td class="cell"><span>17 Oct</span><span class="note">2:16 PM</span></td>
+												<td class="cell"><span class="badge bg-success">Paid</span></td>
+												<td class="cell">$259.35</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+											
+											<tr>
+												<td class="cell">#15344</td>
+												<td class="cell"><span class="truncate">Pellentesque diam </span></td>
+												<td class="cell">Teresa Holland</td>
+												<td class="cell"><span class="cell-data">16 Oct</span><span class="note">01:16 AM</span></td>
+												<td class="cell"><span class="badge bg-success">Paid</span></td>
+												<td class="cell">$123.00</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+											
+											<tr>
+												<td class="cell">#15343</td>
+												<td class="cell"><span class="truncate">Vestibulum a accumsan </span></td>
+												<td class="cell">Jayden Massey</td>
+												<td class="cell"><span class="cell-data">15 Oct</span><span class="note">8:07 PM</span></td>
+												<td class="cell"><span class="badge bg-success">Paid</span></td>
+												<td class="cell">$199.00</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+										
+											
+											<tr>
+												<td class="cell">#15341</td>
+												<td class="cell"><span class="truncate">Morbi vulputate lacinia </span></td>
+												<td class="cell">Raymond Atkins</td>
+												<td class="cell"><span class="cell-data">11 Oct</span><span class="note">11:18 AM</span></td>
+												<td class="cell"><span class="badge bg-success">Paid</span></td>
+												<td class="cell">$678.26</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+		
+										</tbody>
+									</table>
+						        </div><!--//table-responsive-->
+						    </div><!--//app-card-body-->		
+						</div><!--//app-card-->
+			        </div><!--//tab-pane-->
+			        
+			        <div class="tab-pane fade" id="orders-pending" role="tabpanel" aria-labelledby="orders-pending-tab">
+					    <div class="app-card app-card-orders-table mb-5">
+						    <div class="app-card-body">
+							    <div class="table-responsive">
+							        <table class="table mb-0 text-left">
+										<thead>
+											<tr>
+												<th class="cell">Banka</th>
+												<th class="cell" style="width:10%">Jira Proje No</th>
+												<th class="cell">Jira Task No</th>
+												<th class="cell">Proje Adı</th>
+												<th class="cell">Öncelik</th>
+												<th class="cell">DZD Statü</th>
+												<th class="cell">Jira Statü</th>
+												<th class="cell">Bölüm</th>
+												<th class="cell">DZD Takım</th>
+												<th class="cell">İlgili Analist</th>
+												<th class="cell">İlgili Yazılımcı</th>
+												<th class="cell">Efor(A/G)</th>
+												<th class="cell">Intertech Takım</th>
+												<th class="cell">NOT</th>
+												<th class="cell">Inv. Number</th>
+												<th class="cell">Faturalandırma Yılı ve Dönemi</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="cell">#15345</td>
+												<td class="cell"><span class="truncate">Consectetur sit</span></td>
+												<td class="cell">Dylan Ambrose</td>
+												<td class="cell"><span class="cell-data">16 Oct</span><span class="note">03:16 AM</span></td>
+												<td class="cell"><span class="badge bg-warning">Pending</span></td>
+												<td class="cell">$96.20</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+										</tbody>
+									</table>
+						        </div><!--//table-responsive-->
+						    </div><!--//app-card-body-->		
+						</div><!--//app-card-->
+			        </div><!--//tab-pane-->
+			        <div class="tab-pane fade" id="orders-cancelled" role="tabpanel" aria-labelledby="orders-cancelled-tab">
+					    <div class="app-card app-card-orders-table mb-5">
+						    <div class="app-card-body">
+							    <div class="table-responsive">
+							        <table class="table mb-0 text-left">
+										<thead>
+											<tr>
+												<th class="cell">Banka</th>
+												<th class="cell" style="width:10%">Jira Proje No</th>
+												<th class="cell">Jira Task No</th>
+												<th class="cell">Proje Adı</th>
+												<th class="cell">Öncelik</th>
+												<th class="cell">DZD Statü</th>
+												<th class="cell">Jira Statü</th>
+												<th class="cell">Bölüm</th>
+												<th class="cell">DZD Takım</th>
+												<th class="cell">İlgili Analist</th>
+												<th class="cell">İlgili Yazılımcı</th>
+												<th class="cell">Efor(A/G)</th>
+												<th class="cell">Intertech Takım</th>
+												<th class="cell">NOT</th>
+												<th class="cell">Inv. Number</th>
+												<th class="cell">Faturalandırma Yılı ve Dönemi</th>
+											</tr>
+										</thead>
+										<tbody>
+											
+											<tr>
+												<td class="cell">#15342</td>
+												<td class="cell"><span class="truncate">Justo feugiat </span></td>
+												<td class="cell">Reina Brooks</td>
+												<td class="cell"><span class="cell-data">12 Oct</span><span class="note">04:23 PM</span></td>
+												<td class="cell"><span class="badge bg-danger">Cancelled</span></td>
+												<td class="cell">$59.00</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+											
+										</tbody>
+									</table>
+						        </div><!--//table-responsive-->
+						    </div><!--//app-card-body-->		
+						</div><!--//app-card-->
+			        </div><!--//tab-pane-->
+				</div><!--//tab-content-->
+				
+				
+			    
+		    </div><!--//container-fluid-->
+</div><!--//app-content-->
+
+	 <script src="~/plugins/popper.min.js"></script>
+     <script src="~/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+     <!-- Page Specific JS -->
+     <script src="~/js/app.js"></script> 
+
+	 <style>
+		 /*div.td.cell{
+
+			 column-width: 100px;
+		 }
+		 div.th.cell{
+			 column-width: 100px;
+
+		 }*/
+
+		 
+
+		 div.table-responsive{
+			   width: 100%;
+			   height: 500px;
+			   overflow: auto;
+			   
+		 }
+
+		 table {
+			 table-layout:auto;
+		 }
+
+
+	 </style>

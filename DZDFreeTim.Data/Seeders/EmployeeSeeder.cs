@@ -21,7 +21,8 @@ namespace DZDFreeTim.Data.Seeders
                     Password = "kyd8952e",
                     EmployementDate = new DateTime(2018, 7, 24),
                     EmployeeType = "analyst",
-                    TeamId = 1
+                    TeamId = 1,
+                    IsActive=true,
         
                 },
                 new Employee() {
@@ -31,17 +32,21 @@ namespace DZDFreeTim.Data.Seeders
                     Password = "efedw562",
                     EmployementDate = new DateTime(2019, 7, 24),
                     EmployeeType = "analyst",
-                    TeamId = 2
+                    TeamId = 2,
+                    IsActive=true,
+
 
                 },
                 new Employee() {
-                    EmployeeID = 3,
+                   EmployeeID = 3,
                     Name = "Yasin Ekinci",
                     Email = "yasin.ekinci@dzdtech.com",
                     Password = "eu546des",
                     EmployementDate = new DateTime(2019, 5, 24),
                     EmployeeType = "developer",
-                    TeamId = 3
+                    TeamId = 3,
+                    IsActive=true,
+
 
                 },
                 new Employee() {
@@ -51,7 +56,33 @@ namespace DZDFreeTim.Data.Seeders
                     Password = "dk856sd3",
                     EmployementDate = new DateTime(2020, 10, 20),
                     EmployeeType = "developer",
-                    TeamId = 1
+                    TeamId = 1,
+                    IsActive=true,
+
+
+                },
+                new Employee() {
+                    EmployeeID = 5,
+                    Name = "Umut Yıldırım",
+                    Email = "umut.yildirim@dzdtech.com",
+                    Password = "dk8gfdv56sd31",
+                    EmployementDate = new DateTime(2019, 10, 20),
+                    EmployeeType = "project_admin",
+                    TeamId = 3,
+                    IsActive=true,
+
+
+                },
+                new Employee() {
+                    EmployeeID = 6,
+                    Name = "Emirhan Bülbül",
+                    Email = "emirhan.bülbül@dzdtech.com",
+                    Password = "dgdfgsdvsdfs45",
+                    EmployementDate = new DateTime(2018, 10, 20),
+                    EmployeeType = "itsm_admin",
+                    TeamId = 3,
+                    IsActive=true,
+
 
                 }
 
