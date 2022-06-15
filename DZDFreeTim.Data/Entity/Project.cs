@@ -55,7 +55,7 @@ namespace DZDFreeTim.Data.Entity
         public int InvNumber { get; set; }
 
         
-        [StringLength(8)]
+        [StringLength(50)]
         public string BillYearQuarter{ get; set; }
     }
 }
