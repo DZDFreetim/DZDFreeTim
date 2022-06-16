@@ -76,7 +76,7 @@ namespace DZDFreeTim.Data.Seeders
                 new Employee() {
                     EmployeeID = 6,
                     Name = "Emirhan Bülbül",
-                    Email = "emirhan.bülbül@dzdtech.com",
+                    Email = "emirhan.bulbul@dzdtech.com",
                     Password = "dgdfgsdvsdfs45",
                     EmployementDate = new DateTime(2018, 10, 20),
                     EmployeeType = "itsm_admin",

@@ -71,9 +71,9 @@ namespace DZDFreeTim.Web.Mvc.Controllers
                     else if (user.EmployeeType == "developer")
                         return RedirectToAction("Developer", "User");
                     else if (user.EmployeeType == "project_admin")
-                        return RedirectToAction("AddProject","Admin");
+                        return RedirectToAction("ProjectIndex","AdminProject");
                     else if (user.EmployeeType == "itsm_admin")
-                        return RedirectToAction("AddITSM", "Admin");
+                        return RedirectToAction("ITSMIndex", "AdminITSM");
                     //return Redirect(returnUrl != null ? returnUrl : "/");
                 }
             }
