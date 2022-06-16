@@ -19,8 +19,7 @@ namespace DZDFreeTim.Web.Mvc.Controllers
 
         }
 
-        [Authorize(Roles = "superuser")]
-      
+        [Authorize(Roles = "superuser")]      
         public IActionResult SuperUser()
         {
             return View();
