@@ -12,6 +12,7 @@ namespace DZDFreeTim.Data.Seeders
     {
         public static void SeedData(ModelBuilder modelBuilder)
         {
+
             var issues = new List<Issue>()
             {
                 new Issue()

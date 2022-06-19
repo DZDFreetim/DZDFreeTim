@@ -16,7 +16,7 @@ namespace DZDFreeTim.Data.Seeders
             {
                 new DzdStatus() {
                     DzdStatusId=1,
-                    Definition=""
+                    Definition="00 - Salesforce İhale Bekleniyor"
                 },
                 new DzdStatus() {
                     DzdStatusId=2,

@@ -1,5 +1,5 @@
 ﻿
-
+@model IEnumerable<ProjectDetailModel>
  <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">
 			    <div class="row g-3 mb-4 align-items-center justify-content-between">
@@ -63,6 +63,7 @@
 				</nav>
 				
 				
+				
 				<div class="tab-content" id="orders-table-tab-content">
 			        <div class="tab-pane fade show active" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
 					    <div class="app-card app-card-orders-table shadow-sm mb-5">
@@ -91,125 +92,29 @@
 											</tr>
 										</thead>
 										<tbody>
+											@foreach (var item in Model){
 											<tr>
-												<td class="cell">Deniz</td>
-												<td class="cell"><span class="truncate">DENIZ-38926</span></td>
-												<td class="cell">ISCM-5762</td>
-												<td class="cell"><span>Ticari Elektronik İleti Formu/Dijital Onay</span><span class="note">2:16 PM</span></td>
-												<td class="cell"><span class="badge bg-success">3</span></td>
-												<td class="cell">00 - Salesforce İhale Bekleniyor</td>
+												<td class="cell">@item.BankName</td>
+												<td class="cell"><span class="truncate">@item.JiraProjectNo</span></td>
+												<td class="cell">@item.JiraTaskNo</td>
+												<td class="cell"><span>@item.ProjectName</span><span class="note">2:16 PM</span></td>
+												<td class="cell"><span class="badge bg-success">@item.Priority</span></td>
+												<td class="cell">@item.DzdStatusName</td>
 												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#">01 - Ön Analiz</a></td>*@
-												<td class="cell">01 - Ön Analiz</td>
+												<td class="cell">@item.JiraStatus</td>
 												<td class="cell">CRM Technologies</td>
 												<td class="cell">Kampanya</td>
-												<td class="cell">Sena Kaytaz</td>
-												<td class="cell">Yasin Ekinci</td>
-												<td class="cell">16</td>
-												<td class="cell">İletişim Yönetimi</td>
-												<td class="cell">Taşınma Yılı ve Dönemi : 2022</td>
-												<td class="cell"> </td>
-												<td class="cell">2022-Q1</td>
+												<td class="cell">@item.AnalystName</td>
+												<td class="cell">@item.DeveloperName</td>
+												<td class="cell">@item.Effort</td>
+												<td class="cell">@item.IntertechTeamName</td>
+												<td class="cell">@item.Notes</td>
+												<td class="cell">@item.InvNumber </td>
+												<td class="cell">@item.BillYearQuarter</td>
 												
-
 											</tr>
-											<tr>
-												<td class="cell">Deniz</td>
-												<td class="cell"><span class="truncate">DENIZ-38926</span></td>
-												<td class="cell">ISCM-5762</td>
-												<td class="cell"><span>Ticari Elektronik İleti Formu/Dijital Onay</span><span class="note">2:16 PM</span></td>
-												<td class="cell"><span class="badge bg-success">3</span></td>
-												<td class="cell">00 - Salesforce İhale Bekleniyor</td>
-												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#">01 - Ön Analiz</a></td>*@
-												<td class="cell">01 - Ön Analiz</td>
-												<td class="cell">CRM Technologies</td>
-												<td class="cell">Kampanya</td>
-												<td class="cell">Sena Kaytaz</td>
-												<td class="cell">Yasin Ekinci</td>
-												<td class="cell">16</td>
-												<td class="cell">İletişim Yönetimi</td>
-												<td class="cell">Taşınma Yılı ve Dönemi : 2022</td>
-												<td class="cell"> </td>
-												<td class="cell">2022-Q1</td>
-											</tr>
-											<tr>
-												<td class="cell">Deniz</td>
-												<td class="cell"><span class="truncate">DENIZ-38926</span></td>
-												<td class="cell">ISCM-5762</td>
-												<td class="cell"><span>Ticari Elektronik İleti Formu/Dijital Onay</span><span class="note">2:16 PM</span></td>
-												<td class="cell"><span class="badge bg-success">3</span></td>
-												<td class="cell">00 - Salesforce İhale Bekleniyor</td>
-												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#">01 - Ön Analiz</a></td>*@
-												<td class="cell">01 - Ön Analiz</td>
-												<td class="cell">CRM Technologies</td>
-												<td class="cell">Kampanya</td>
-												<td class="cell">Sena Kaytaz</td>
-												<td class="cell">Yasin Ekinci</td>
-												<td class="cell">16</td>
-												<td class="cell">İletişim Yönetimi</td>
-												<td class="cell">Taşınma Yılı ve Dönemi : 2022</td>
-												<td class="cell"> </td>
-												<td class="cell">2022-Q1</td>
-											</tr>
+											}
 											
-											<tr>
-												<td class="cell">Deniz</td>
-												<td class="cell"><span class="truncate">DENIZ-38926</span></td>
-												<td class="cell">ISCM-5762</td>
-												<td class="cell"><span>Ticari Elektronik İleti Formu/Dijital Onay</span><span class="note">2:16 PM</span></td>
-												<td class="cell"><span class="badge bg-success">3</span></td>
-												<td class="cell">00 - Salesforce İhale Bekleniyor</td>
-												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#">01 - Ön Analiz</a></td>*@
-												<td class="cell">01 - Ön Analiz</td>
-												<td class="cell">CRM Technologies</td>
-												<td class="cell">Kampanya</td>
-												<td class="cell">Sena Kaytaz</td>
-												<td class="cell">Yasin Ekinci</td>
-												<td class="cell">16</td>
-												<td class="cell">İletişim Yönetimi</td>
-												<td class="cell">Taşınma Yılı ve Dönemi : 2022</td>
-												<td class="cell"> </td>
-												<td class="cell">2022-Q1</td>
-											</tr>
-											
-											<tr>
-												<td class="cell">Deniz</td>
-												<td class="cell"><span class="truncate">DENIZ-38926</span></td>
-												<td class="cell">ISCM-5762</td>
-												<td class="cell"><span>Ticari Elektronik İleti Formu/Dijital Onay</span><span class="note">2:16 PM</span></td>
-												<td class="cell"><span class="badge bg-success">3</span></td>
-												<td class="cell">00 - Salesforce İhale Bekleniyor</td>
-												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#">01 - Ön Analiz</a></td>*@
-												<td class="cell">01 - Ön Analiz</td>
-												<td class="cell">CRM Technologies</td>
-												<td class="cell">Kampanya</td>
-												<td class="cell">Sena Kaytaz</td>
-												<td class="cell">Yasin Ekinci</td>
-												<td class="cell">16</td>
-												<td class="cell">İletişim Yönetimi</td>
-												<td class="cell">Taşınma Yılı ve Dönemi : 2022</td>
-												<td class="cell"> </td>
-												<td class="cell">2022-Q1</td>
-											</tr>
-											
-											<tr>
-												<td class="cell">Deniz</td>
-												<td class="cell"><span class="truncate">DENIZ-38926</span></td>
-												<td class="cell">ISCM-5762</td>
-												<td class="cell"><span>Ticari Elektronik İleti Formu/Dijital Onay</span><span class="note">2:16 PM</span></td>
-												<td class="cell"><span class="badge bg-success">3</span></td>
-												<td class="cell">00 - Salesforce İhale Bekleniyor</td>
-												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#">01 - Ön Analiz</a></td>*@
-												<td class="cell">01 - Ön Analiz</td>
-												<td class="cell">CRM Technologies</td>
-												<td class="cell">Kampanya</td>
-												<td class="cell">Sena Kaytaz</td>
-												<td class="cell">Yasin Ekinci</td>
-												<td class="cell">16</td>
-												<td class="cell">İletişim Yönetimi</td>
-												<td class="cell">Taşınma Yılı ve Dönemi : 2022</td>
-												<td class="cell"> </td>
-												<td class="cell">2022-Q1</td>
-											</tr>
 		
 										</tbody>
 									</table>
