@@ -1,0 +1,297 @@
+﻿
+	    <div class="app-content pt-3 p-md-3 p-lg-4">
+		    <div class="container-xl">
+			    
+			    <div class="row g-3 mb-4 align-items-center justify-content-between">
+				    <div class="col-auto">
+			            <h1 class="app-page-title mb-0">PROJELER</h1>
+				    </div>
+				    <div class="col-auto">
+					     <div class="page-utilities">
+						    <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
+							    <div class="col-auto">
+								    <form class="table-search-form row gx-1 align-items-center">
+					                    <div class="col-auto">
+					                        <input type="text" id="search-orders" name="searchorders" class="form-control search-orders" placeholder="Ara">
+					                    </div>
+					                    <div class="col-auto">
+					                        <button type="submit" class="btn app-btn-secondary">Arama</button>
+					                    </div>
+					                </form>
+					                
+							    </div><!--//col-->
+							    <div class="col-auto">
+								    
+								    <select class="form-select w-auto" >
+										  <option selected value="option-1">Tümü</option>
+										  <option value="option-2">AY</option>
+										  <option value="option-3">3 Aylık</option>
+										  <option value="option-4">6 Aylık</option>
+										  
+									</select>
+							    </div>
+							    <div class="col-auto">						    
+								    <a class="btn app-btn-secondary" href="#">
+									    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download me-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		  <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+		  <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+		</svg>
+									    Rapor Oluştur
+									</a>
+							    </div>
+						    </div><!--//row-->
+					    </div><!--//table-utilities-->
+				    </div><!--//col-auto-->
+			    </div><!--//row-->
+			   
+			    
+			    <nav id="orders-table-tab" class="orders-table-tab app-nav-tabs nav shadow-sm flex-column flex-sm-row mb-4">
+				    <a class="flex-sm-fill text-sm-center nav-link active" id="orders-all-tab" data-bs-toggle="tab" href="#orders-all" role="tab" aria-controls="orders-all" aria-selected="true">Tüm Projeler</a>
+				    <a class="flex-sm-fill text-sm-center nav-link"  id="orders-paid-tab" data-bs-toggle="tab" href="#orders-paid" role="tab" aria-controls="orders-paid" aria-selected="false">Tamamlanan</a>
+				    <a class="flex-sm-fill text-sm-center nav-link" id="orders-pending-tab" data-bs-toggle="tab" href="#orders-pending" role="tab" aria-controls="orders-pending" aria-selected="false">Devam Eden</a>
+				    <a class="flex-sm-fill text-sm-center nav-link" id="orders-cancelled-tab" data-bs-toggle="tab" href="#orders-cancelled" role="tab" aria-controls="orders-cancelled" aria-selected="false">İptal Edilen</a>
+				</nav>
+				
+				
+				<div class="tab-content" id="orders-table-tab-content">
+			        <div class="tab-pane fade show active" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
+					    <div class="app-card app-card-orders-table shadow-sm mb-5">
+						    <div class="app-card-body">
+							    <div class="table-responsive">
+							        <table class="table app-table-hover mb-0 text-left">
+										<thead>
+											<tr>
+												<th class="cell">Banka</th>
+												<th class="cell">Jira Proje No</th>
+												<th class="cell">Jira Task No</th>
+												<th class="cell">Proje Adı</th>
+												<th class="cell">DZD Statü</th>
+												<th class="cell">A/G</th>
+												<th class="cell"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="cell">HSBC</td>
+												<td class="cell">HSBC-14226</td>
+												<td class="cell">HSBC-15242</td>
+												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
+												<td class="cell">14 - Salesforce Fatura Talebi</td>
+												<td class="cell">6</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
+											</tr>
+											<tr>
+												<td class="cell">HSBC</td>
+												<td class="cell">HSBC-14226</td>
+												<td class="cell">HSBC-15242</td>
+												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
+												<td class="cell">14 - Salesforce Fatura Talebi</td>
+												<td class="cell">6</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
+											</tr>
+											<tr>
+												<td class="cell">HSBC</td>
+												<td class="cell">HSBC-14226</td>
+												<td class="cell">HSBC-15242</td>
+												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
+												<td class="cell">14 - Salesforce Fatura Talebi</td>
+												<td class="cell">6</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
+											</tr>
+											
+											<tr>
+												<td class="cell">HSBC</td>
+												<td class="cell">HSBC-14226</td>
+												<td class="cell">HSBC-15242</td>
+												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
+												<td class="cell">14 - Salesforce Fatura Talebi</td>
+												<td class="cell">6</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
+											</tr>
+											
+											<tr>
+												<td class="cell">HSBC</td>
+												<td class="cell">HSBC-14226</td>
+												<td class="cell">HSBC-15242</td>
+												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
+												<td class="cell">14 - Salesforce Fatura Talebi</td>
+												<td class="cell">6</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
+											</tr>
+											
+											<tr>
+												<td class="cell">HSBC</td>
+												<td class="cell">HSBC-14226</td>
+												<td class="cell">HSBC-15242</td>
+												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
+												<td class="cell">14 - Salesforce Fatura Talebi</td>
+												<td class="cell">6</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
+											</tr>
+		
+										</tbody>
+									</table>
+						        </div><!--//table-responsive-->
+						       
+						    </div><!--//app-card-body-->		
+						</div><!--//app-card-->
+						<nav class="app-pagination">
+							<ul class="pagination justify-content-center">
+								<li class="page-item disabled">
+									<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+							    </li>
+								<li class="page-item active"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item">
+								    <a class="page-link" href="#">Next</a>
+								</li>
+							</ul>
+						</nav><!--//app-pagination-->
+						
+			        </div><!--//tab-pane-->
+			        
+			        <div class="tab-pane fade" id="orders-paid" role="tabpanel" aria-labelledby="orders-paid-tab">
+					    <div class="app-card app-card-orders-table mb-5">
+						    <div class="app-card-body">
+							    <div class="table-responsive">
+								    
+							        <table class="table mb-0 text-left">
+										<thead>
+											<tr>
+												<th class="cell">Banka</th>
+												<th class="cell">Jira Proje No</th>
+												<th class="cell">Jira Task No</th>
+												<th class="cell">Proje Adı</th>
+												<th class="cell">DZD Statü</th>
+												<th class="cell">A/G</th>
+												<th class="cell"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="cell">HSBC</td>
+												<td class="cell">HSBC-14226</td>
+												<td class="cell">HSBC-15242</td>
+												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
+												<td class="cell"><span class="badge bg-success">14 - Salesforce Fatura Talebi</span></td>
+												<td class="cell">6</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
+											</tr>
+											
+											
+											<tr>
+												<td class="cell">HSBC</td>
+												<td class="cell">HSBC-14226</td>
+												<td class="cell">HSBC-15242</td>
+												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
+												<td class="cell"><span class="badge bg-success">14 - Salesforce Fatura Talebi</span></td>
+												<td class="cell">6</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
+											</tr>
+											
+											<tr>
+												<td class="cell">HSBC</td>
+												<td class="cell">HSBC-14226</td>
+												<td class="cell">HSBC-15242</td>
+												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
+												<td class="cell"><span class="badge bg-success">14 - Salesforce Fatura Talebi</span></td>
+												<td class="cell">6</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
+											</tr>
+										
+											
+											<tr>
+												<td class="cell">HSBC</td>
+												<td class="cell">HSBC-14226</td>
+												<td class="cell">HSBC-15242</td>
+												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
+												<td class="cell"><span class="badge bg-success">14 - Salesforce Fatura Talebi</span></td>
+												<td class="cell">6</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
+											</tr>
+		
+										</tbody>
+									</table>
+						        </div><!--//table-responsive-->
+						    </div><!--//app-card-body-->		
+						</div><!--//app-card-->
+			        </div><!--//tab-pane-->
+			        
+			        <div class="tab-pane fade" id="orders-pending" role="tabpanel" aria-labelledby="orders-pending-tab">
+					    <div class="app-card app-card-orders-table mb-5">
+						    <div class="app-card-body">
+							    <div class="table-responsive">
+							        <table class="table mb-0 text-left">
+										<thead>
+											<tr>
+												<th class="cell">Banka</th>
+												<th class="cell">Jira Proje No</th>
+												<th class="cell">Jira Task No</th>
+												<th class="cell">Proje Adı</th>
+												<th class="cell">DZD Statü</th>
+												<th class="cell">A/G</th>
+												<th class="cell"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="cell">DENIZAG</td>
+												<td class="cell">DENIZAG-27566</td>
+												<td class="cell">DENIZAG-27819</td>
+												<td class="cell"><span class="truncate">DENIZAG-28003 Phone Banking Pin Structure</span></td>												
+												<td class="cell"><span class="badge bg-warning">11 - Banka UAT</span></td>
+												<td class="cell">9</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>*@
+											</tr>
+											
+
+										</tbody>
+									</table>
+						        </div><!--//table-responsive-->
+						    </div><!--//app-card-body-->		
+						</div><!--//app-card-->
+			        </div><!--//tab-pane-->
+			        <div class="tab-pane fade" id="orders-cancelled" role="tabpanel" aria-labelledby="orders-cancelled-tab">
+					    <div class="app-card app-card-orders-table mb-5">
+						    <div class="app-card-body">
+							    <div class="table-responsive">
+							        <table class="table mb-0 text-left">
+										<thead>
+											<tr>
+												<th class="cell">Banka</th>
+												<th class="cell">Jira Proje No</th>
+												<th class="cell">Jira Task No</th>
+												<th class="cell">Proje Adı</th>
+												<th class="cell">DZD Statü</th>
+												<th class="cell">A/G</th>
+												<th class="cell"></th>
+											</tr>
+										</thead>
+										<tbody>
+											
+											<tr>
+												<td class="cell">HSBC</td>
+												<td class="cell">HSBC-4631</td>
+												<td class="cell">HSBC-7311</td>
+												<td class="cell"><span class="truncate">Gtrf müşteri segmenti ayrımı talebi</span></td>
+												<td class="cell"><span class="badge bg-warning">11 - Banka UAT</span></td>
+												<td class="cell">1</td>
+												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>*@
+												
+											</tr>
+																							
+												
+										</tbody>
+									</table>
+						        </div><!--//table-responsive-->
+						    </div><!--//app-card-body-->		
+						</div><!--//app-card-->
+			        </div><!--//tab-pane-->
+				</div><!--//tab-content-->
+				
+				
+			    
+		    </div><!--//container-fluid-->
+	    </div><!--//app-content-->
+

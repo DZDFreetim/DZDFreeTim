@@ -5,14 +5,14 @@ namespace DZDFreeTim.Web.Mvc.Controllers
 {
     public class UserController : Controller
     {
-        [Authorize(Roles ="developer")]
+        [Authorize(Roles = "developer")]
         public IActionResult Developer()
         {
             return View();
 
         }
 
-        [Authorize(Roles ="analyst")]        
+        [Authorize(Roles = "analyst")]
         public IActionResult Analist()
         {
             return View();

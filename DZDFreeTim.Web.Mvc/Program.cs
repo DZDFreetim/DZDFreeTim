@@ -28,7 +28,7 @@ using (var scope = app.Services.CreateScope())
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
     // Veritabanýný sil
-    db.Database.EnsureDeleted();
+   // db.Database.EnsureDeleted();
 
     // Veritabanýný oluþturur
     db.Database.EnsureCreated();

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DZDFreeTim.Data.Entity;
+using System.ComponentModel.DataAnnotations;
 
 namespace DZDFreeTim.Web.Mvc.Models
 {
@@ -16,5 +17,7 @@ namespace DZDFreeTim.Web.Mvc.Models
         public string Password { get; set; }
 
         public bool RememberMe { get; set; }
+
+        //public Employee Employee { get; set; }
     }
 }
