@@ -9,7 +9,7 @@
 	<!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>DZD Freetim Performans Takip Sistemi </title>
+    <title>DZD Tech Freetim Performans Takip Sistemi </title>
     
     <!-- Meta -->
     <meta charset="utf-8">
@@ -34,10 +34,12 @@
 		    <div class="d-flex flex-column align-content-end">
 			    <div class="app-auth-body mx-auto">	
 				    <div class="app-auth-branding mb-4"><a class="app-logo" ><img class="logo-icon me-2" src="~/assets/images/app-logo.svg" alt="logo"></a></div>
-					<h2 class="auth-heading text-center mb-5">DZD TECH FREETIM </h2>
+					<h2 class="auth-heading text-center mb-5">DZD TECH FREETIM <br /> PERFORMANS TAKİP SİSTEMİ</h2>
                     <div class="auth-form-container text-start">
+                        
 						@using (Html.BeginForm("Login", "Auth", FormMethod.Post))
                         {
+                            @Html.ValidationSummary(true)
                             <div class="email mb-3">
                                 
                                 <label class="sr-only" for="signin-email">Email</label>
@@ -99,7 +101,7 @@
 			    <div class="d-flex flex-column align-content-end h-100">
 				    <div class="h-100"></div>
 				    <div class="overlay-content p-3 p-lg-4 rounded">
-					    <h5 class="mb-3 overlay-title">DZD FREETİM </h5>
+					    <h5 class="mb-3 overlay-title">DZD TECH  FREETİM </h5>
 					    <div>DZD Freetim ile <strong>Projelerini </strong> , <strong> Çağrılarını </strong>  ve <strong> Prim hesaplarını </strong> takip edebilirsin. </div>
 				    </div>
 				</div>

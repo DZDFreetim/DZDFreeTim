@@ -77,8 +77,9 @@ namespace DZDFreeTim.Web.Mvc.Controllers
                     //return Redirect(returnUrl != null ? returnUrl : "/");
                 }
             }
-
+            else { 
             ModelState.AddModelError(string.Empty, "Mail adresi ya da şifre hatalı!");
+            }
 
             return View();
         }
