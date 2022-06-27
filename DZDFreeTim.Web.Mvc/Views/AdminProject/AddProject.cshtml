@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
 {
     ViewBag.Title = "AddProject";
 }
@@ -7,63 +6,63 @@
 <h2>Proje Giriş Ekranı</h2>
 <br />
 <br />
-<form action="/FormExample1/Create" method="post">
+<form action="/AdminProject/AddNewProject" method="post">
     <label>Banka</label>    
     <br />
-    <input type="text" name="banka" />
+    <input type="text" name="BankName" />
     <br />
     <br />
     <label>Jira Proje No</label>   
     <br />
-    <input type="text" name="jiraProjeNo" />
+    <input type="text" name="JiraProjectNo" />
     <br />
     <br />
     <label>Jira Task No</label>   
     <br />
     <br />
-    <input type="text" name="jiraTaskNo" />
+    <input type="text" name="JiraTaskNo" />
     <br />
     <br />
      <label>Proje Adı</label>   
     <br />
     <br />
-    <input type="text" name="projeAdi" />
+    <input type="text" name="ProjectName" />
     <br />
     <br /> <label>Öncelik</label>   
     <br />
     <br />
-    <input type="text" name="oncelik" />
+    <input type="text" name="Priority" />
     <br />
     <br /> <label>Efor</label>   
     <br />
     <br />
-    <input type="text" name="efor" />
+    <input type="text" name="Effort" />
     <br />
     <br /> <label>Intertech Takım</label>   
     <br />
     <br />
-    <input type="text" name="intertechTakim" />
+    <input type="text" name="IntertechTeam" />
     <br />
     <br /> <label>Not</label>   
     <br />
     <br />
-    <input type="text" name="Not" />
+    <input type="text" name="Notes" />
     <br />
     <br /> <label>Inv. Number</label>   
     <br />
     <br />
-    <input type="text" name="invNumber" />
+    <input type="text" name="InvNumber" />
     <br />
     <br /> <label>Faturalandırma Yılı ve Dönemi</label>   
     <br />
     <br />
-    <input type="text" name="faturalandırmaYiliVeDonemi" />
+    <input type="text" name="BillYearQuarter" />
     <br />
     <br />
     <input type="submit" value="Ekle" />
-	 <input type="submit" value="Güncelle" />
- 		<input type="submit" value="Sil" />
-    		 	<input type="submit" value="Vazgeç" />
+	<input type="submit" value="Güncelle" />
+    <input type="submit" value="Sil" />
+    <input type="submit" value="Vazgeç" />
  
 </form>
 
