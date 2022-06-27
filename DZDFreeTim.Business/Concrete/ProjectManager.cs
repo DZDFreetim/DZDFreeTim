@@ -17,13 +17,19 @@ namespace DZDFreeTim.Business.Concrete
         {
             return repoProject.List();
         }
+        public int AddNewProject(Project p)
+        {
+
+            return repoProject.Insert(p);
+        }
 
 
-        
 
 
 
 
-        
+
+
+
     }
 }
