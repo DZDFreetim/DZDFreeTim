@@ -34,7 +34,7 @@ namespace DZDFreeTim.Data
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
           //  string connectionString = "Data Source=(LocalDb)\\MSSQLLocalDB; Initial Catalog=DZDFreeTimDb; Integrated Security=SSPI;";
-            string connectionString  = "Data Source=(LocalDb)\\MSSQLLocalDB; Initial Catalog=DZDFreeTimDb; Integrated Security=SSPI;";
+            string connectionString  = "Data Source=45.158.14.184 ;Initial Catalog=DZDFreeTeam; User ID=sa;password='DzdTech2022++';";
 
 
             builder.UseSqlServer(connectionString);
