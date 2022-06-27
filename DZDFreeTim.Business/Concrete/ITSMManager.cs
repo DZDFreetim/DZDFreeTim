@@ -16,6 +16,21 @@ namespace DZDFreeTim.Business.Concrete
         {
             return repoitsm.List();
         }
+
+
+        public int AddNewITSM(Issue i)
+        {
+
+            return repoitsm.Insert(i);
+        }
+
+
+        
+
+
+
+
+
     }
 }
 
