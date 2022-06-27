@@ -16,6 +16,15 @@ namespace DZDFreeTim.Business.Concrete
         {
             return repoitsm.List();
         }
+        public string GetNameById(int id)
+        {
+            var itsmName = repoitsm.GetById(id);
+            if (itsmName == null)
+            {
+                return String.Empty;
+            }
+            return itsmName.IssueName;
+        }
     }
 }
 

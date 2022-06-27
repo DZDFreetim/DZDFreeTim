@@ -1,7 +1,7 @@
-﻿@model LoginViewModel
+﻿@model ResourceViewModel
 
 <div class="app-wrapper">
-
+	<script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
 	<div class="app-content pt-3 p-md-3 p-lg-4">
 		<div class="container-xl">
 
@@ -10,7 +10,7 @@
 			<div class="app-card alert alert-dismissible shadow-sm mb-4 border-left-decoration" role="alert">
 				<div class="inner">
 					<div class="app-card-body p-3 p-lg-4">
-						<h3 class="mb-3">Merhaba, Employee Name</h3>
+						<h3 class="mb-3">Merhaba, @Model.Name</h3>
 						<div class="row gx-5 gy-3">
 							<div class="col-12 col-lg-9">
 
@@ -37,7 +37,7 @@
 					<div class="app-card app-card-stat shadow-sm h-100">
 						<div class="app-card-body p-3 p-lg-4">
 							<h4 class="stats-type mb-1">Toplam Prim Hakediş</h4>
-							<div class="stats-figure"> 100  </div>
+							<div class="stats-figure"> @Model.TotalBonus  </div>
 							<div class="stats-meta text-success">
 								A/G
 							</div>
@@ -50,7 +50,7 @@
 					<div class="app-card app-card-stat shadow-sm h-100">
 						<div class="app-card-body p-3 p-lg-4">
 							<h4 class="stats-type mb-1">Proje Prim Hakediş</h4>
-							<div class="stats-figure">80  </div>
+							<div class="stats-figure"> @Model.ProjectBonus  </div>
 							<div class="stats-meta text-success">
 								@*<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
@@ -65,7 +65,7 @@
 					<div class="app-card app-card-stat shadow-sm h-100">
 						<div class="app-card-body p-3 p-lg-4">
 							<h4 class="stats-type mb-1">Çağrı Prim Hakediş</h4>
-							<div class="stats-figure">20</div>
+							<div class="stats-figure">@Model.ITSMBonus</div>
 							<div class="stats-meta text-success">
 								A/G
 							</div>
@@ -77,7 +77,7 @@
 					<div class="app-card app-card-stat shadow-sm h-100">
 						<div class="app-card-body p-3 p-lg-4">
 							<h4 class="stats-type mb-1">Atanmış Proje ve Çağrı Sayısı</h4>
-							<div class="stats-figure">6 </div>
+							<div class="stats-figure"> @Model.OpenAll </div>
 							<div class="stats-meta">Devam Eden</div>
 						</div><!--//app-card-body-->
 						<a class="app-card-link-mask" href="#"></a>
@@ -109,7 +109,9 @@
 								</select>
 							</div>
 							<div class="chart-container">
+							
 								<canvas id="canvas-barchart"></canvas>
+							
 							</div>
 						</div><!--//app-card-body-->
 					</div><!--//app-card-->
@@ -154,9 +156,9 @@
 									<h4 class="app-card-title"> Projeler </h4>
 								</div><!--//col-->
 								<div class="col-auto">
-									<div class="card-header-action">
-										<a href="#">Tüm Projeler</a>
-									</div><!--//card-header-actions-->
+										<div class="card-header-action">
+											@Html.ActionLink("Tüm Projeler", "Projects", "Project", null)
+										</div><!--//card-header-actions-->
 								</div><!--//col-->
 							</div><!--//row-->
 						</div><!--//app-card-header-->
@@ -205,6 +207,7 @@
 						</div><!--//app-card-body-->
 					</div><!--//app-card-->
 				</div><!--//col-->
+		
 
 				<div class="col-12 col-lg-6">
 					<div class="app-card app-card-stats-table h-100 shadow-sm">
@@ -215,7 +218,7 @@
 								</div><!--//col-->
 								<div class="col-auto">
 									<div class="card-header-action">
-										<a href="#">Tüm Çağrılar</a>
+										<a href="@Url.Action("ITSM", "ITSM")">Tüm Çağrılar</a>
 									</div><!--//card-header-actions-->
 								</div><!--//col-->
 							</div><!--//row-->

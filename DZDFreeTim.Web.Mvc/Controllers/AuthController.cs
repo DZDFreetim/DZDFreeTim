@@ -3,6 +3,7 @@ using DZDFreeTim.Web.Mvc.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Security.Claims;
 
 namespace DZDFreeTim.Web.Mvc.Controllers
@@ -66,6 +67,14 @@ namespace DZDFreeTim.Web.Mvc.Controllers
 
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrinciple, properties);
 
+                    LoginViewModel data = new LoginViewModel()
+                    {
+                        Email = model.Email,
+                        Password = model.Password
+                    };
+                    TempData["mydata"] = JsonConvert.SerializeObject(model); 
+                    //ViewData["mydata"] = JsonConvert.SerializeObject(model);
+
                     if (user.EmployeeType == "analyst")
                         return RedirectToAction("Analist", "User");
                     else if (user.EmployeeType == "developer")
@@ -76,10 +85,12 @@ namespace DZDFreeTim.Web.Mvc.Controllers
                         return RedirectToAction("ITSMIndex", "AdminITSM");
                     //return Redirect(returnUrl != null ? returnUrl : "/");
                 }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Mail adresi ya da şifre hatalı!");
+                }
             }
-            else { 
-            ModelState.AddModelError(string.Empty, "Mail adresi ya da şifre hatalı!");
-            }
+            
 
             return View();
         }

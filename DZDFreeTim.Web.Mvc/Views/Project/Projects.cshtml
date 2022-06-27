@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<ProjectDetailModel>
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">
 			    
@@ -71,63 +71,16 @@
 											</tr>
 										</thead>
 										<tbody>
+											@foreach (var item in Model){
 											<tr>
-												<td class="cell">HSBC</td>
-												<td class="cell">HSBC-14226</td>
-												<td class="cell">HSBC-15242</td>
-												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
-												<td class="cell">14 - Salesforce Fatura Talebi</td>
-												<td class="cell">6</td>
-												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
+												<td class="cell">@item.BankName</td>
+												<td class="cell"><span class="truncate">@item.JiraProjectNo</span></td>
+												<td class="cell">@item.JiraTaskNo</td>
+												<td class="cell"><span>@item.ProjectName</span><span class="note">2:16 PM</span></td>
+												<td class="cell">@item.DzdStatusName</td>
+												<td class="cell">@item.Effort</td>
 											</tr>
-											<tr>
-												<td class="cell">HSBC</td>
-												<td class="cell">HSBC-14226</td>
-												<td class="cell">HSBC-15242</td>
-												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
-												<td class="cell">14 - Salesforce Fatura Talebi</td>
-												<td class="cell">6</td>
-												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
-											</tr>
-											<tr>
-												<td class="cell">HSBC</td>
-												<td class="cell">HSBC-14226</td>
-												<td class="cell">HSBC-15242</td>
-												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
-												<td class="cell">14 - Salesforce Fatura Talebi</td>
-												<td class="cell">6</td>
-												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
-											</tr>
-											
-											<tr>
-												<td class="cell">HSBC</td>
-												<td class="cell">HSBC-14226</td>
-												<td class="cell">HSBC-15242</td>
-												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
-												<td class="cell">14 - Salesforce Fatura Talebi</td>
-												<td class="cell">6</td>
-												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
-											</tr>
-											
-											<tr>
-												<td class="cell">HSBC</td>
-												<td class="cell">HSBC-14226</td>
-												<td class="cell">HSBC-15242</td>
-												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
-												<td class="cell">14 - Salesforce Fatura Talebi</td>
-												<td class="cell">6</td>
-												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
-											</tr>
-											
-											<tr>
-												<td class="cell">HSBC</td>
-												<td class="cell">HSBC-14226</td>
-												<td class="cell">HSBC-15242</td>
-												<td class="cell"><span class="truncate">HSBC-14786 910A6062213963 - Dijital Link KVKK Uygulaması</span></td>
-												<td class="cell">14 - Salesforce Fatura Talebi</td>
-												<td class="cell">6</td>
-												@*<td class="cell"><a class="btn-sm app-btn-secondary" href="#ProjectIndex">Detay</a></td>*@
-											</tr>
+											}
 		
 										</tbody>
 									</table>

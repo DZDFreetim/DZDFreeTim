@@ -17,13 +17,21 @@ namespace DZDFreeTim.Business.Concrete
         {
             return repoProject.List();
         }
+        public string GetNameById(int id)
+        {
+            var projectName = repoProject.GetById(id);
+            if (projectName == null)
+            {
+                return String.Empty;
+            }
+            return projectName.ProjectName;
+        }
 
 
-        
 
 
 
 
-        
+
     }
 }

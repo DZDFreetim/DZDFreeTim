@@ -33,8 +33,10 @@ namespace DZDFreeTim.Data
         // DB Bağlantı Metni
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            string connectionString = "Data Source=(LocalDb)\\MSSQLLocalDB; Initial Catalog=DZDFreeTimDb; Integrated Security=SSPI;";
+            string connectionString = "Data Source=45.158.14.184 ;Initial Catalog=DZDFreeTeam; User ID=sa;password='DzdTech2022++';";
+            //Data Source=(LocalDb)\\MSSQLLocalDB; Initial Catalog=DZDFreeTimDb; Integrated Security=SSPI;
 
+            //"Data Source=45.158.14.184 ;Initial Catalog=DZDFreeTeam; User ID=sa;password='DzdTech2022++';"
             builder.UseSqlServer(connectionString);
         }
 
@@ -43,7 +45,8 @@ namespace DZDFreeTim.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //model seeder , 14 class için tek tek yazılacaak
-            EmployeeSeeder.SeedData(modelBuilder);
+            
+           /* EmployeeSeeder.SeedData(modelBuilder);
             BankSeeder.SeedData(modelBuilder);
             DepartmentSeeder.SeedData(modelBuilder);
             DzdStatusSeeder.SeedData(modelBuilder);
@@ -55,7 +58,8 @@ namespace DZDFreeTim.Data
             ProjectSeeder.SeedData(modelBuilder);
             ReporterSeeder.SeedData(modelBuilder);
             ResolutionSeeder.SeedData(modelBuilder);
-            TeamSeeder.SeedData(modelBuilder);
+            TeamSeeder.SeedData(modelBuilder);*/
+            
         }
     }
 }
