@@ -22,13 +22,13 @@
 							    </div><!--//col-->
 							    <div class="col-auto">
 								    
-								    <select class="form-select w-auto" >
+								    @*<select class="form-select w-auto" >
 										  <option selected value="option-1">Tümü</option>
 										  <option value="option-2">Aylık</option>
 										  <option value="option-3">3 Aylık</option>
 										  <option value="option-4">6 Aylık</option>
 										  
-									</select>
+									</select>*@
 							    </div>
 							    <div class="col-auto">						    
 								    <a class="btn app-btn-secondary" href="#">
@@ -45,10 +45,11 @@
 			    </div><!--//row-->
 			   
 			    
-			    <nav id="orders-table-tab" class="orders-table-tab app-nav-tabs nav shadow-sm flex-column flex-sm-row mb-4">Tümü</a>
-				    <a class="flex-sm-fill text-sm-center nav-link"  id="orders-paid-tab" data-bs-toggle="tab" href="#orders-paid" role="tab" aria-controls="orders-paid" aria-selected="false">Kapanan</a>
+			     <nav id="orders-table-tab" class="orders-table-tab app-nav-tabs nav shadow-sm flex-column flex-sm-row mb-4">
+				    <a class="flex-sm-fill text-sm-center nav-link active" id="orders-all-tab" data-bs-toggle="tab" href="#orders-all" role="tab" aria-controls="orders-all" aria-selected="true">Tüm Projeler</a>
+				    <a class="flex-sm-fill text-sm-center nav-link"  id="orders-paid-tab" data-bs-toggle="tab" href="#orders-paid" role="tab" aria-controls="orders-paid" aria-selected="false">Tamamlanan</a>
 				    <a class="flex-sm-fill text-sm-center nav-link" id="orders-pending-tab" data-bs-toggle="tab" href="#orders-pending" role="tab" aria-controls="orders-pending" aria-selected="false">Devam Eden</a>
-				    <a class="flex-sm-fill text-sm-center nav-link" id="orders-cancelled-tab" data-bs-toggle="tab" href="#orders-cancelled" role="tab" aria-controls="orders-cancelled" aria-selected="false">İptal Edilen </a>
+				    <a class="flex-sm-fill text-sm-center nav-link" id="orders-cancelled-tab" data-bs-toggle="tab" href="#orders-cancelled" role="tab" aria-controls="orders-cancelled" aria-selected="false">İptal Edilen</a>
 				</nav>
 				
 				
@@ -173,7 +174,7 @@
 											</tr>
 											
 											<tr>
-												td class="cell">Incident</td>
+												<td class="cell">Incident</td>
 												<td class="cell">Odeabank</td>
 												<td class="cell">ITSM-453728</td>
 												<td class="cell"><span class="truncate">internet ve mobil şube parola değiştirme sorunu </span></td>
@@ -182,7 +183,7 @@
 											</tr>
 											
 											<tr>
-												td class="cell">Incident</td>
+												<td class="cell">Incident</td>
 												<td class="cell">Odeabank</td>
 												<td class="cell">ITSM-453728</td>
 												<td class="cell"><span class="truncate">internet ve mobil şube parola değiştirme sorunu </span></td>
@@ -220,7 +221,7 @@
 												<th class="cell">Çağrı Detay</th>
 												<th class="cell">Priority</th>
 												<th class="cell">Status</th>
-												<th class="cell"></th>
+												@*<th class="cell"></th>*@
 											</tr>
 										</thead>
 										<tbody>

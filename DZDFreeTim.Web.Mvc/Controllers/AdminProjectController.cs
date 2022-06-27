@@ -7,6 +7,7 @@ using System.Text;
 using System.Dynamic;
 using DZDFreeTim.Business.Concrete;
 using DZDFreeTim.Web.Mvc.Models;
+using DZDFreeTim.Data.Entity;
 
 namespace DZDFreeTim.Web.Mvc.Controllers
 {
@@ -70,7 +71,7 @@ namespace DZDFreeTim.Web.Mvc.Controllers
             return View(projectDetailList);
         }
 
-        [HttpPost]
+        [HttpGet]
         
 
 
@@ -78,5 +79,15 @@ namespace DZDFreeTim.Web.Mvc.Controllers
         {
             return View();
         }
+
+
+        public IActionResult AddNewProject(Project project)
+        {
+            projectm.AddNewProject(project);
+            return RedirectToAction("ProjectIndex");
+
+        }
+
+
     }
 }

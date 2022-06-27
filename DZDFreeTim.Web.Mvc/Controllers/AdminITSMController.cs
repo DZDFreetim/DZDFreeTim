@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using DZDFreeTim.Business.Concrete;
 using DZDFreeTim.Web.Mvc.Models;
+using DZDFreeTim.Data.Entity;
 
 namespace DZDFreeTim.Web.Mvc.Controllers
 {
@@ -62,5 +63,26 @@ namespace DZDFreeTim.Web.Mvc.Controllers
 
             return View(listIssues);
         }
+
+        
+        public IActionResult AddITSM()
+        {
+            
+
+            return View();
+        }
+
+        public IActionResult AddNewIssue(Issue issue)
+        {
+            itsmm.AddNewITSM(issue);
+            return RedirectToAction("ITSMIndex");   
+        }
+
+
+
+
+
+
+
     }
 }
