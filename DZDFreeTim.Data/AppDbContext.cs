@@ -33,7 +33,9 @@ namespace DZDFreeTim.Data
         // DB Bağlantı Metni
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            string connectionString = "Data Source=(LocalDb)\\MSSQLLocalDB; Initial Catalog=DZDFreeTimDb; Integrated Security=SSPI;";
+          //  string connectionString = "Data Source=(LocalDb)\\MSSQLLocalDB; Initial Catalog=DZDFreeTimDb; Integrated Security=SSPI;";
+            string connectionString  = "Data Source=(LocalDb)\\MSSQLLocalDB; Initial Catalog=DZDFreeTimDb; Integrated Security=SSPI;";
+
 
             builder.UseSqlServer(connectionString);
         }

@@ -90,7 +90,7 @@ namespace DZDFreeTim.Web.Mvc.Controllers
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
-            return RedirectToAction("Index","Login");
+            return RedirectToAction("Login");
         }
 
         public IActionResult AccessDenied()
