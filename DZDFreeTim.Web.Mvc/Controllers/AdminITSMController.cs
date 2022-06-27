@@ -74,7 +74,7 @@ namespace DZDFreeTim.Web.Mvc.Controllers
 
         public IActionResult AddNewIssue(Issue issue)
         {
-            itsmm.AddNewITSM(issue);
+           // itsmm.AddNewITSM(issue);
             return RedirectToAction("ITSMIndex");   
         }
 
